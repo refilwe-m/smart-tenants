@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiFillHome, AiOutlineEnter, AiFillBell } from "react-icons/ai";
+import { AiFillHome, AiFillBell } from "react-icons/ai";
+import { FiSettings } from "react-icons/fi";
+import { ImMeter } from "react-icons/im";
+import { CgProfile } from "react-icons/cg";
+import { MdSettingsInputHdmi } from "react-icons/md";
 
 export const SideNav: React.FC = () => {
   return (
@@ -9,7 +13,7 @@ export const SideNav: React.FC = () => {
       <ul>
         <li className="mb-2">
           <Link to="/profile" className="flex items-center hover:text-blue-500">
-            <AiFillBell className="mr-2" />
+            <CgProfile className="mr-2" />
             Profile
           </Link>
         </li>
@@ -21,7 +25,7 @@ export const SideNav: React.FC = () => {
         </li>
         <li className="mb-2">
           <Link to="/meter" className="flex items-center hover:text-blue-500">
-            <AiOutlineEnter className="mr-2" />
+            <ImMeter className="mr-2" />
             My Meter
           </Link>
         </li>
@@ -36,7 +40,7 @@ export const SideNav: React.FC = () => {
             to="/electronics"
             className="flex items-center hover:text-blue-500"
           >
-            <AiFillBell className="mr-2" />
+            <MdSettingsInputHdmi className="mr-2" />
             Electronics
           </Link>
         </li>
@@ -46,17 +50,19 @@ export const SideNav: React.FC = () => {
             to="/settings"
             className="flex items-center hover:text-blue-500"
           >
-            <AiFillBell className="mr-2" />
+            <FiSettings className="mr-2" />
             Settings
           </Link>
         </li>
       </ul>
-      <li className="mb-2">
-        <Link to="/login" className="flex items-center hover:text-blue-500">
-          <AiFillBell className="mr-2" />
-          Logout
-        </Link>
-      </li>
+
+      <Link
+        to="/login"
+        className="flex items-center absolute bottom-0 mb-6 hover:text-blue-500"
+      >
+        <AiFillBell className="mr-2" />
+        Logout
+      </Link>
     </div>
   );
 };

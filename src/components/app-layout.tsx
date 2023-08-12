@@ -7,7 +7,7 @@ export const AppLayout = ({ children }: ChildrenProps) => {
       <nav className="h-screen">
         <SideNav />
       </nav>
-      <section className="w-screen">{children}</section>
+      <section className="w-screen pt-12 bg-gray-50">{children}</section>
     </main>
   );
 };
