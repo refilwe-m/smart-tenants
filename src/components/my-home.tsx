@@ -30,6 +30,14 @@ export const MyHome = () => {
           <span>Status: {"off"}</span>
         </div>
       </section>
+
+      <section className="flex justify-center items-center">
+        <span className="text-5xl">♨️</span>
+        <div className="text-xs font-bold flex flex-col gap-1">
+          <span>Current Usage: {"120kw"} </span>
+          <span>Status: {"on"}</span>
+        </div>
+      </section>
     </Rnd>
   );
 };
