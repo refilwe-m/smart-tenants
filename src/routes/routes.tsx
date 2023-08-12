@@ -2,6 +2,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 import { AppLayout, MyAlerts, MyMeter, Profile } from "../components";
 import { MyHome } from "../components/my-home";
+import { Electronics } from "../components/pages/electronics";
 
 export const AppRouter = () => {
   return (
@@ -17,6 +18,10 @@ export const AppRouter = () => {
           <Route
             path="/profile"
             element={<AppLayout children={<Profile />} />}
+          />
+          <Route
+            path="/electronics"
+            element={<AppLayout children={<Electronics />} />}
           />
           <Route
             path="*"

@@ -5,34 +5,18 @@ import { FiSettings } from "react-icons/fi";
 import { ImMeter } from "react-icons/im";
 import { CgProfile } from "react-icons/cg";
 import { MdSettingsInputHdmi } from "react-icons/md";
+import { CiLogout } from "react-icons/ci";
+import { Logo } from "../assets";
 
 export const SideNav: React.FC = () => {
   return (
     <div className="bg-gray-800 text-white h-full w-56 flex-shrink-0 p-4">
-      <div className="text-2xl font-bold mb-6">Navigation</div>
+      <img src={Logo} alt="logo" />
       <ul>
         <li className="mb-2">
           <Link to="/profile" className="flex items-center hover:text-blue-500">
             <CgProfile className="mr-2" />
             Profile
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link to="/home" className="flex items-center hover:text-blue-500">
-            <AiFillHome className="mr-2" />
-            My Home
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link to="/meter" className="flex items-center hover:text-blue-500">
-            <ImMeter className="mr-2" />
-            My Meter
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link to="/alerts" className="flex items-center hover:text-blue-500">
-            <AiFillBell className="mr-2" />
-            My Alerts
           </Link>
         </li>
         <li className="mb-2">
@@ -42,6 +26,25 @@ export const SideNav: React.FC = () => {
           >
             <MdSettingsInputHdmi className="mr-2" />
             Electronics
+          </Link>
+        </li>
+        <li className="mb-2">
+          <Link to="/meter" className="flex items-center hover:text-blue-500">
+            <ImMeter className="mr-2" />
+            My Meter
+          </Link>
+        </li>
+        <li className="mb-2">
+          <Link to="/home" className="flex items-center hover:text-blue-500">
+            <AiFillHome className="mr-2" />
+            My Home
+          </Link>
+        </li>
+
+        <li className="mb-2">
+          <Link to="/alerts" className="flex items-center hover:text-blue-500">
+            <AiFillBell className="mr-2" />
+            My Alerts
           </Link>
         </li>
 
@@ -60,7 +63,7 @@ export const SideNav: React.FC = () => {
         to="/login"
         className="flex items-center absolute bottom-0 mb-6 hover:text-blue-500"
       >
-        <AiFillBell className="mr-2" />
+        <CiLogout className="mr-2" />
         Logout
       </Link>
     </div>
