@@ -6,7 +6,7 @@ interface Device {
   powerConsumption: number;
 }
 
-const TenantForm: React.FC = () => {
+export const TenantForm: React.FC = () => {
   const [device, setDevice] = useState<Device>({
     deviceName: "",
     deviceType: "",
@@ -94,4 +94,3 @@ const TenantForm: React.FC = () => {
   );
 };
 
-export default TenantForm;

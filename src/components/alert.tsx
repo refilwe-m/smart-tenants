@@ -7,7 +7,12 @@ interface AlertProps {
   onMarkAsRead: (id: number) => void;
 }
 
-const Alert: React.FC<AlertProps> = ({ id, message, isRead, onMarkAsRead }) => {
+export const Alert: React.FC<AlertProps> = ({
+  id,
+  message,
+  isRead,
+  onMarkAsRead,
+}) => {
   const markAsRead = () => {
     onMarkAsRead(id);
   };
@@ -26,5 +31,3 @@ const Alert: React.FC<AlertProps> = ({ id, message, isRead, onMarkAsRead }) => {
     </div>
   );
 };
-
-export default Alert;

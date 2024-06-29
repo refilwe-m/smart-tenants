@@ -1,5 +1,4 @@
-import React from "react";
-import TenantForm from "../tenant-form";
+import { TenantForm } from "../tenant-form";
 
 export const Electronics = () => {
   return (

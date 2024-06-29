@@ -59,9 +59,19 @@ export const MyHome = () => {
             size={{ width: item.width, height: item.height }}
             position={{ x: item.x, y: item.y }}
             onDragStop={(e, d) => {
-              setState({ x: d.x, y: d.y });
+              console.log(e);
+              const currState = [...state];
+              currState[index] = {
+                ...currState[index],
+                x: d.x,
+                y: d.y,
+                width: currState[index].width,
+                height: currState[index].height,
+              };
+              setState(currState);
             }}
             onResizeStop={(e, direction, ref, delta, position) => {
+              console.log(e, direction, delta, position);
               const currState = [...state];
               currState[index] = {
                 width: Number(ref.style.width),
@@ -100,10 +110,16 @@ export const MyHome = () => {
         <Rnd
           size={{ width: myDevice.width, height: myDevice.height }}
           position={{ x: myDevice.x, y: myDevice.y }}
-          onDragStop={(e, d) => {
-            setMyDevice({ x: d.x, y: d.y });
+          onDragStop={(_, d) => {
+            setMyDevice({
+              x: d.x,
+              y: d.y,
+              width: myDevice.width,
+              height: myDevice.height,
+            });
           }}
           onResizeStop={(e, direction, ref, delta, position) => {
+            console.log(e, direction, delta, position);
             setMyDevice({
               width: Number(ref.style.width),
               height: Number(ref.style.height),
